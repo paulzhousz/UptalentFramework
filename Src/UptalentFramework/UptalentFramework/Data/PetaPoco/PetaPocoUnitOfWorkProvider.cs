@@ -9,9 +9,8 @@ namespace UptalentFramework.Data.PetaPoco
     {
         private Database _dbContext;
         public object GetDBContext()
-        {
-            string defaultConnectStringName = ConfigurationManager.ConnectionStrings[1].Name;
-            return _dbContext ?? (_dbContext = new Database(defaultConnectStringName));
+        {            
+            return _dbContext ?? (_dbContext = new Database(Constants.CONNSTRING_DEFAULT_NAME));
         }
 
         public object GetDBContext(string connectStringName)

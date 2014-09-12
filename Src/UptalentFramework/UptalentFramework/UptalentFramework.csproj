@@ -11,6 +11,7 @@
     <AssemblyName>UptalentFramework</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,8 +36,11 @@
       <HintPath>..\Components\PetaPoco.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Collections\IPagedList.cs" />
     <Compile Include="Collections\PagedList.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Data\DataUtil.cs" />
     <Compile Include="Data\IUintOfWork.cs" />
     <Compile Include="Data\IUnitOfWorkProvider.cs" />
@@ -53,9 +58,22 @@
     <Compile Include="Data\PetaPoco\PetaPocoUintOfWork.cs" />
     <Compile Include="Data\PetaPoco\PetaPocoUnitOfWorkProvider.cs" />
     <Compile Include="Data\PetaPoco\PetaPocoRepository.cs" />
+    <Compile Include="Localization\ILocalizationResourceProvider.cs" />
+    <Compile Include="Localization\LanguageBarHelper.cs" />
+    <Compile Include="Localization\LocalizableDataAnnotationsModelMetadataProvider.cs" />
+    <Compile Include="Localization\LocalizableDataAnnotationsModelValidator.cs" />
+    <Compile Include="Localization\LocalizableDataAnnotationsModelValidatorProvider.cs" />
+    <Compile Include="Localization\LocalizationConfig.cs" />
+    <Compile Include="Localization\LocalizationControllerHelper.cs" />
+    <Compile Include="Localization\LocalizationDbResourceProvider.cs" />
+    <Compile Include="Localization\LocalizationResourceProvider.cs" />
+    <Compile Include="Localization\LocalizationResourceProviderBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="EasyUIExt\" />
+    <Folder Include="MVC\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

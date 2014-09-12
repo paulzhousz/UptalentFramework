@@ -4,3 +4,9 @@ D:\Paul Zhou\My Source\UptalentFramework\UptalentFramework\bin\Debug\UptalentFra
 D:\Paul Zhou\My Source\UptalentFramework\UptalentFramework\bin\Debug\PetaPoco.dll
 D:\Paul Zhou\My Source\UptalentFramework\UptalentFramework\obj\Debug\UptalentFramework.dll
 D:\Paul Zhou\My Source\UptalentFramework\UptalentFramework\obj\Debug\UptalentFramework.pdb
+D:\Paul Zhou\UptalentFramework\Src\UptalentFramework\UptalentFramework\bin\Debug\UptalentFramework.dll
+D:\Paul Zhou\UptalentFramework\Src\UptalentFramework\UptalentFramework\bin\Debug\UptalentFramework.pdb
+D:\Paul Zhou\UptalentFramework\Src\UptalentFramework\UptalentFramework\bin\Debug\PetaPoco.dll
+D:\Paul Zhou\UptalentFramework\Src\UptalentFramework\UptalentFramework\obj\Debug\UptalentFramework.csprojResolveAssemblyReference.cache
+D:\Paul Zhou\UptalentFramework\Src\UptalentFramework\UptalentFramework\obj\Debug\UptalentFramework.dll
+D:\Paul Zhou\UptalentFramework\Src\UptalentFramework\UptalentFramework\obj\Debug\UptalentFramework.pdb
