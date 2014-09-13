@@ -66,13 +66,14 @@
     <Compile Include="Localization\LocalizationConfig.cs" />
     <Compile Include="Localization\LocalizationControllerHelper.cs" />
     <Compile Include="Localization\LocalizationDbResourceProvider.cs" />
+    <Compile Include="Localization\LocalizationModel.cs" />
     <Compile Include="Localization\LocalizationResourceProvider.cs" />
     <Compile Include="Localization\LocalizationResourceProviderBase.cs" />
+    <Compile Include="MVC\BaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EasyUIExt\" />
-    <Folder Include="MVC\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

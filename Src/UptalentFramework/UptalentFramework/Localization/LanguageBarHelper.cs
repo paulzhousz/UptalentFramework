@@ -52,10 +52,10 @@ namespace UptalentFramework.Localization
             var actionName = routeValues["action"].ToString();
             var controllerName = routeValues["controller"].ToString();
             // set the language into route values
-            routeValues[Constants.ROUTE_PARAMNAME_LANG] = cultureName;
+            routeValues[Constants.RouteParamnameLang] = cultureName;
             // generate the language specify url
             var urlHelper = new UrlHelper(helper.ViewContext.RequestContext, helper.RouteCollection);
-            var url = urlHelper.RouteUrl(Constants.ROUTE_NAME, routeValues);
+            var url = urlHelper.RouteUrl(Constants.RouteName, routeValues);
             // check whether the current thread ui culture is this language
             var current_lang_name = Thread.CurrentThread.CurrentUICulture.Name.ToLower();
             var isSelected = strictSelected ?
@@ -77,7 +77,7 @@ namespace UptalentFramework.Localization
         {
             var language = LanguageUrl(helper, cultureName, strictSelected);
             var link = helper.RouteLink(language.IsSelected ? selectedText : unselectedText,
-                Constants.ROUTE_NAME, language.RouteValues, htmlAttributes);
+                Constants.RouteName, language.RouteValues, htmlAttributes);
             return link;
         }
 
@@ -87,7 +87,7 @@ namespace UptalentFramework.Localization
         {
             var language = LanguageUrl(helper, cultureName, strictSelected);
             var partial = helper.Partial(language.IsSelected ? selectedPartialViewName : unselectedPartialViewName, model, helper.ViewData).ToHtmlString();
-            var link = helper.RouteLink(CST_PARTIAL_PLACEHOLDER, Constants.ROUTE_NAME, language.RouteValues, htmlAttributes).ToHtmlString();
+            var link = helper.RouteLink(CST_PARTIAL_PLACEHOLDER, Constants.RouteName, language.RouteValues, htmlAttributes).ToHtmlString();
             return MvcHtmlString.Create(link.Replace(CST_PARTIAL_PLACEHOLDER, partial));
         }
     }

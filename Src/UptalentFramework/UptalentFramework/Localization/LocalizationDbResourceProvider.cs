@@ -8,7 +8,7 @@ namespace UptalentFramework.Localization
         private string _connectionString;
 
         public LocalizationDbResourceProvider()
-            : this(Constants.CONNSTRING_DEFAULT_NAME)
+            : this(Constants.ConnstringDefaultName)
         {
         }
 
@@ -24,7 +24,7 @@ namespace UptalentFramework.Localization
             {
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT [Value] FROM [Caspar].[dbo].[Resource] WHERE [Key] = @key AND [Culture] = @culture";
+                    cmd.CommandText = "SELECT [Value] FROM [Resource] WHERE [Key] = @key AND [Culture] = @culture";
                     cmd.Parameters.AddWithValue("key", key);
                     cmd.Parameters.AddWithValue("culture", cultureName);
                     conn.Open();

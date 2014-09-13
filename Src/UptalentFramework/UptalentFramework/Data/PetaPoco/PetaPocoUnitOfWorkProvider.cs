@@ -10,7 +10,7 @@ namespace UptalentFramework.Data.PetaPoco
         private Database _dbContext;
         public object GetDBContext()
         {            
-            return _dbContext ?? (_dbContext = new Database(Constants.CONNSTRING_DEFAULT_NAME));
+            return _dbContext ?? (_dbContext = new Database(Constants.ConnstringDefaultName));
         }
 
         public object GetDBContext(string connectStringName)

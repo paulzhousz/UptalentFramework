@@ -37,9 +37,9 @@ namespace MVCTest.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Model_AccountModels_LoginModel_UserName_Required")]
+        [Display(Name = "Model_AccountModels_LoginModel_UserName_Display")]
         [EmailAddress]
-        [Display(Name = "电子邮件")]
         public string Email { get; set; }
 
         [Required]

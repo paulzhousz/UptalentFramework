@@ -17,8 +17,8 @@ namespace UptalentFramework.Localization
             );
 
             routes.MapRoute(
-                Constants.ROUTE_NAME, // Route name
-                string.Format("{{{0}}}/{{controller}}/{{action}}/{{id}}", Constants.ROUTE_PARAMNAME_LANG), // URL with parameters
+                Constants.RouteName, // Route name
+                string.Format("{{{0}}}/{{controller}}/{{action}}/{{id}}", Constants.RouteParamnameLang), // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
         }

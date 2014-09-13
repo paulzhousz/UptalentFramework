@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UptalentFramework.Localization;
 
 namespace MVCTest.Controllers
 {
@@ -10,12 +11,13 @@ namespace MVCTest.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = LocalizationResourceProvider.Current.GetString("Controller_HomeIndex_Message1");
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = LocalizationResourceProvider.Current.GetString("Controller_HomeAbout_Message");
 
             return View();
         }
